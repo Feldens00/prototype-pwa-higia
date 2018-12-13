@@ -54,22 +54,35 @@
         #preloader .inner img{
             width: 50vh;
             height: auto;
-            background-color: white;   
+            background-color: white; 
+
         }
 
         #medication {
             background-color: rgb(0, 250, 128);
+            min-height: 25vh;
         }
         #exams {
             background-color: rgb(0, 204, 128);
+            min-height: 25vh;
         }
         #schedule {
             background-color: rgb(0, 128, 212);
+            min-height: 25vh;
         }
         #cheers {
             background-color: rgb(0, 94, 193);
+            min-height: 25vh;
         }
 
+        h3 {
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            color: white;
+        }
          
         @keyframes animarBola {
           0% {
@@ -87,48 +100,77 @@
             transform: scale(1);
             opacity: 1; 
           } 
-        }
-        /* end: Preloader */    
+        }   
     </style>  
             
 </head>
 <body>
-     <div class="section" id="medication">
-        <div class="row">
-            <div class="col m4 s12"></div>
-            <div class="col m8 s12">
-                <h4>Teste </h4>
-            </div>   
+    <div id="preloader">
+        <div class="inner">
+           <img src="logo_higia.png" class="img-fluid circle">
         </div>
-     </div>
-     <div class="section" id="exams">
-        <div class="row">
-            <div class="col m4 s12"></div>
-            <div class="col m8 s12">
-                <h4>Teste </h4>
-            </div>   
+    </div>
+    <a href="#">
+        <div class="section" id="medication">
+           <div class="container center-align">
+               <div class="row">
+                   <div class="col m4 s12">
+                       <i class="large material-icons">adjust</i>
+                   </div>
+                   <div class="col m8 s12">
+                       <h3>MEDICAÇÃO</h3>
+                   </div>   
+               </div>
+           </div>
         </div>
-     </div>
-     <div class="section" id="schedule">
-        <div class="row">
-            <div class="col m4 s12"></div>
-            <div class="col m8 s12">
-                <h4>Teste </h4>
-            </div>   
+    </a>
+    <a href="#">
+        <div class="section" id="exams">
+           <div class="container center-align">
+               <div class="row">
+                   <div class="col m4 s12">
+                       <i class="large material-icons">add_box</i>
+                   </div>
+                   <div class="col m8 s12">
+                       <h3>EXAMES</h3>
+                   </div>   
+               </div>
+           </div>
         </div>
-     </div>
-     <div class="section" id="cheers">
-        <div class="row">
-            <div class="col m4 s12"></div>
-            <div class="col m8 s12">
-                <h4>Teste </h4>
-            </div>   
+    </a>
+    <a href="specialty.html">
+        <div class="section" id="schedule">
+            <div class="container center-align">
+                <div class="row">
+                    <div class="col m4 s12">
+                        <i class="large material-icons">add_box</i>
+                    </div>
+                    <div class="col m8 s12">
+                        <h3>AGENDAMENTO DE CONSULTAS</h3>
+                    </div>   
+                </div>
+            </div>
         </div>
-     </div>
+    </a>
+    <a href="#">
+        <div class="section" id="cheers">
+           <div class="container center-align">
+               <div class="row">
+                   <div class="col m4 s12">
+                       <i class="large material-icons">blur_circular</i>
+                   </div>
+                   <div class="col m8 s12">
+                       <h3>MINHA SAÚDE</h3>
+                   </div>   
+               </div>
+           </div>
+        </div>
+    </a>
     
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
+        $(window).on('load', function () {
+            $('#preloader').delay(1000).fadeOut('slow'); 
+            $('body').delay(1000).css({'overflow': 'visible'});
         });
     </script>
 </body>
